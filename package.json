@@ -23,12 +23,10 @@
     "@fontsource-variable/geist": "5.3.0",
     "@fontsource-variable/jetbrains-mono": "5.3.0",
     "@mdx-js/react": "3.1.1",
-    "@ngrok/app-server": "0.3.3",
+    "@ngrok/app-server": "0.3.5",
     "@ngrok/mantle": "0.93.7",
     "@phosphor-icons/react": "2.1.10",
-    "@react-router/node": "8.5.1",
-    "hono": "4.13.16",
-    "isbot": "5.2.2",
+    "isbot": "5.2.3",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "react-router": "8.5.1",
@@ -39,7 +37,7 @@
     "@mdx-js/rollup": "3.1.1",
     "@react-router/dev": "8.5.1",
     "@shikijs/rehype": "4.6.0",
-    "@tailwindcss/vite": "4.3.4",
+    "@tailwindcss/vite": "4.3.5",
     "@testing-library/react": "16.3.3",
     "@types/hast": "3.0.5",
     "@types/mdast": "4.0.4",
@@ -51,8 +49,8 @@
     "estree-util-value-to-estree": "3.5.0",
     "happy-dom": "21.0.4",
     "mdast-util-mdx-jsx": "3.2.1",
-    "oxfmt": "0.76.0",
-    "oxlint": "1.91.0",
+    "oxfmt": "0.78.0",
+    "oxlint": "1.93.0",
     "oxlint-tsgolint": "7.0.2006",
     "rehype-slug": "6.0.0",
     "remark-frontmatter": "5.0.0",
@@ -62,14 +60,14 @@
     "remark-parse": "11.0.0",
     "remark-stringify": "11.0.0",
     "shiki": "4.6.0",
-    "tailwindcss": "4.3.4",
+    "tailwindcss": "4.3.5",
     "typescript": "7.0.2",
     "unified": "11.0.5",
-    "vite": "8.3.6",
+    "vite": "8.3.8",
     "vitest": "5.1.0"
   },
   "engines": {
     "node": "^26.0.0"
   },
-  "packageManager": "pnpm@12.18.0"
+  "packageManager": "pnpm@12.19.0"
 }
