@@ -51,7 +51,8 @@ export default defineConfig({
 		}),
 		reactRouter(),
 		// Why the host from the environment: Vercel's build gets the vercel host, and a local build runs on node.
-		appServer(process.env.VERCEL === "1" ? { host: vercel() } : {}),
+		// Why `cdnPages`: no page here changes for one visitor, so the CDN serves each prerendered page with no function call.
+		appServer(process.env.VERCEL === "1" ? { host: vercel({ cdnPages: true }) } : {}),
 	],
 	resolve: {
 		// Why an alias as well as `tsconfigPaths`: MDX posts sit outside the tsconfig `include`.
