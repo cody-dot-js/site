@@ -22,7 +22,7 @@ const permissionsPolicy: Plugin = {
  * - `font-src data:`: the build inlines a small font file as a data URL.
  * - `font-src assets.ngrok.com`: the fonts of mantle's CSS in a post's demo.
  */
-function documentPolicy(scriptSrc: string) {
+function documentPolicy({ scriptSrc }: { scriptSrc: string }) {
 	return [
 		"default-src 'self'",
 		`script-src ${scriptSrc}`,
