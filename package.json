@@ -23,7 +23,7 @@
     "@fontsource-variable/geist": "5.3.0",
     "@fontsource-variable/jetbrains-mono": "5.3.0",
     "@mdx-js/react": "3.1.1",
-    "@ngrok/app-server": "0.4.1",
+    "@ngrok/app-server": "0.5.0",
     "@ngrok/mantle": "0.93.7",
     "@phosphor-icons/react": "2.1.10",
     "isbot": "5.2.3",
@@ -69,5 +69,5 @@
   "engines": {
     "node": "^26.0.0"
   },
-  "packageManager": "pnpm@12.20.0"
+  "packageManager": "pnpm@12.21.0"
 }

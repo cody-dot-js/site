@@ -1,18 +1,8 @@
-import { createServer, defaultPlugins, withHeaderHook } from "@ngrok/app-server";
-import type { Plugin } from "@ngrok/app-server";
+import { createServer, defaultPlugins } from "@ngrok/app-server";
 
 import { CONTRIBUTIONS_PATH } from "./app/features/github-squares/calendar.ts";
 import { fetchContributions } from "./app/features/github-squares/contributions.server.ts";
 import { REDIRECTS } from "./app/redirects.ts";
-
-/** Turns off the browser features that no page here uses. `securityHeaders` has no option for this header. */
-const permissionsPolicy: Plugin = {
-	name: "permissions-policy",
-	middleware: async (context, next) =>
-		withHeaderHook(context, next, (headers) => {
-			headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
-		}),
-};
 
 /**
  * The CSP of each HTML document. `scriptSrc` trusts the document's own scripts:
@@ -47,10 +37,13 @@ const server = createServer({
 		prerendered: { markdownTwins: true },
 		securityHeaders: {
 			// Why 'self': a post frames its own demo page, and no other site may frame a page here.
-			headers: { "Content-Security-Policy": "frame-ancestors 'self'" },
+			headers: {
+				"Content-Security-Policy": "frame-ancestors 'self'",
+				// Why: no page here uses these browser features.
+				"Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+			},
 		},
 		contentSecurityPolicy: { policy: documentPolicy },
-		beforeStatic: [permissionsPolicy],
 	}),
 });
 
